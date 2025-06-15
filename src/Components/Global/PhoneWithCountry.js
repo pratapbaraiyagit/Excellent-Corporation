@@ -1,4 +1,6 @@
-import PhoneInput from 'react-phone-input-2';
+// import PhoneInput from 'react-phone-input-2';
+
+import { PhoneInput } from 'react-international-phone';
 
 export default function PhoneWithCountry({
   phoneNumber,
