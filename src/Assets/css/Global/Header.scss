@@ -1,0 +1,215 @@
+header {
+  padding: 40px 0;
+  position: relative;
+  z-index: 99;
+  transition: 0.5s ease;
+  &.fixed {
+    position: fixed;
+    width: 100%;
+    left: 0;
+    top: -135px;
+    z-index: 99;
+    background: #fff;
+    padding: 15px 0;
+    box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.1);
+    .navbar {
+      .navbar-toggler {
+        .navbar-toggler-icon {
+          background: #000 !important;
+          &:before,
+          &:after {
+            background: #000 !important;
+          }
+        }
+      }
+      .navbar-brand {
+        img {
+          &.logo_white {
+            display: none !important;
+          }
+          &.logo_dark {
+            display: block !important;
+          }
+        }
+      }
+      #navbarScroll {
+        ul {
+          li {
+            a {
+              color: $textDark !important;
+            }
+          }
+        }
+      }
+    }
+  }
+  &.fixed_header {
+    top: 0;
+  }
+  .navbar {
+    padding: 0;
+    .navbar-toggler {
+      padding: 0;
+      margin: 0;
+      width: 30px;
+      height: 30px;
+      background: transparent;
+      outline: 0;
+      border: 0;
+      box-shadow: none;
+      .navbar-toggler-icon {
+        position: relative;
+        width: 26px;
+        height: 2px;
+        background: #000;
+        transform: rotate(45deg);
+        &:before {
+          content: '';
+          position: absolute;
+          right: 0;
+          top: 0;
+          width: 26px;
+          height: 2px;
+          background: #000;
+          transform: rotate(90deg);
+        }
+        &:after {
+          content: '';
+          position: absolute;
+          right: 0;
+          bottom: -8px;
+          width: 16px;
+          height: 2px;
+          background: #000;
+          display: none;
+        }
+      }
+      &.collapsed {
+        .navbar-toggler-icon {
+          transform: rotate(0);
+          &:after {
+            display: block;
+          }
+          &:before {
+            top: -8px;
+            transform: rotate(0);
+            width: 22px;
+          }
+        }
+      }
+    }
+    .navbar-brand {
+      padding: 0;
+      margin: 0;
+      img {
+        max-height: 55px;
+        &.logo_white {
+          display: none;
+        }
+      }
+    }
+    #navbarScroll {
+      ul {
+        display: flex;
+        margin: 0 auto;
+        li {
+          a {
+            padding: 0 20px;
+            font-size: 16px;
+            font-weight: 400;
+            color: $textDark;
+            &.active {
+              text-decoration: underline;
+              font-weight: 600;
+            }
+          }
+        }
+      }
+    }
+    .form-control {
+      border-radius: 36px;
+      border: 2px solid #b9b9b9;
+      padding: 10px 15px 10px 50px;
+      max-width: 210px;
+      background: url(../../Images/search.svg);
+      background-repeat: no-repeat;
+      background-position: center left 12px;
+      &:focus {
+        box-shadow: none;
+      }
+    }
+    .button_right_wrapper {
+      display: flex;
+      align-items: center;
+    }
+  }
+  &.header_white {
+    .navbar {
+      .navbar-toggler {
+        .navbar-toggler-icon {
+          background: #fff;
+          &:before,
+          &:after {
+            background: #fff;
+          }
+        }
+      }
+      .navbar-brand {
+        img {
+          &.logo_dark {
+            display: none;
+          }
+          &.logo_white {
+            display: block;
+          }
+        }
+      }
+      #navbarScroll {
+        ul {
+          li {
+            a {
+              color: $white;
+            }
+          }
+        }
+      }
+      .form-control {
+        background: rgba(255, 255, 255, 0.15) url(../../Images/search.svg);
+        background-repeat: no-repeat;
+        background-position: center left 12px;
+        color: #fff;
+        &::placeholder {
+          color: #b9b9b9;
+        }
+      }
+    }
+  }
+}
+
+.user_dropdown {
+  .dropdown-toggle {
+    padding: 0;
+    img {
+      margin-right: 0;
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+    }
+    &:after {
+      display: none;
+    }
+  }
+  .dropdown-menu {
+    right: 0;
+    left: inherit;
+    top: 60px;
+    border: 1px solid $borderColor;
+    box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2);
+    .dropdown-item {
+      &:focus {
+        background: $primary;
+        color: $white;
+      }
+    }
+  }
+}
