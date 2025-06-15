@@ -5,7 +5,9 @@ import 'bootstrap/dist/js/bootstrap.js';
 import 'primeicons/primeicons.css';
 import 'primereact/resources/primereact.min.css';
 import 'primereact/resources/themes/lara-light-indigo/theme.css';
-import 'react-phone-input-2/lib/style.css';
+// import 'react-phone-input-2/lib/style.css';
+import 'react-international-phone/style.css';
+
 import 'react-range-slider-input/dist/style.css';
 import { Route, Routes, useLocation } from 'react-router-dom';
 import 'swiper/scss';
